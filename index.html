@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Kemenger</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img
+          class="header__image__main item__image"
+          src="images/header/main-bg.jpg"
+          alt="главная картинка"
+        />
+        <div class="header__container _container">
+          <div class="header__top-section">
+            <div class="header__logo">
+              <img src="images/header/logo.png" alt="Логотип" />
+            </div>
+            <nav class="header__menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Каталог</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Сертификаты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__contact">
+              <a href="tel:8(771)1459826"
+                ><svg class="header__phone-call__icon">
+                  <use href="images/header/sprite.svg#phone"></use></svg
+              ></a>
+              <a href="tel:8(771)1459826" class="header__phone-call"
+                >8 (771) 145-98-26</a
+              >
+            </div>
+          </div>
+          <div class="header__content">
+            <div class="header__content__text">
+              <div class="content__text__title">
+                <span>KEMENGER MEKTEBI</span> - центр интеллектуального развития
+              </div>
+              <div class="content__text__desc">
+                Обучение происходит на казахском и русском языках. При записи на
+                два или более курсов предусмотрена скидка. Запишитесь на
+                бесплатный пробный урок.
+              </div>
+              <button data-modal class="content__text__btn common-button">
+                Оставить заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="about">
+          <div class="about__container _container">
+            <div class="about__teachers">
+              <div class="about__teachers about__teachers-desc about__desc">
+                <img
+                  class="desc-teachers-circle"
+                  src="images/about-section/sircle1.svg"
+                  alt=""
+                />
+                <img
+                  class="desc-teachers-bg"
+                  src="images/about-section/bgsquare.svg"
+                  alt=""
+                />
+                В нашем центре работают профессиональные педагоги любящие детей
+                и преданные своему делу. Мы помогаем детям совершенствовать свои
+                интеллекуальные способности чтобы они могли познавать мир и
+                делать его более красивым и добрым.
+              </div>
+              <div class="about__teachers about__image">
+                <img
+                  class="about__teachers_image-main"
+                  src="images/about-section/about-teachers.jpg"
+                  alt="учителя"
+                />
+                <img
+                  class="about__teachers_image-wrapper common-wrapper"
+                  src="images/about-section/about-teachers-wrapper.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="about__kids">
+              <div class="about__kids about__kids-desc about__desc">
+                <img
+                  class="desc-kids-circle"
+                  src="images/about-section/sircle2.svg"
+                  alt=""
+                />
+                <img
+                  class="desc-kids-bg"
+                  src="images/about-section/bgsquare1.png"
+                  alt=""
+                />
+                Наши ученики показывают результат уже с первого месяца работы,
+                мы поддерживаем в нашем центре теплую и дружескую атмосферу
+                Побывав у нас детям обязательно захочется вернуться сюда снова
+                Развивайтесь вместе с нами
+              </div>
+              <div class="about__kids about__image">
+                <img
+                  class="about__kids_image-main"
+                  src="images/about-section/kids-img.jpg"
+                  alt=""
+                />
+                <img
+                  class="about__kids__image-wrapper common-wrapper"
+                  src="images/about-section/about-teachers-wrapper.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal__request modal">
+          <div class="modal__request-dialog dialog">
+            <div class="modal__content">
+              <div data-close class="close-modal">
+                <img
+                  class="close-modal__img"
+                  src="images/modal/closemodal.png"
+                  alt=""
+                />
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal__request__title">
+                  Заполните <span>форму</span> и мы обязательно свяжемся с Вами.
+                </div>
+                <form action="#">
+                  <div class="modal__request__form">
+                    <input
+                      required
+                      class="modal__form__name form__input"
+                      type="text"
+                      name="name"
+                      placeholder="Введите ваше имя..."
+                    />
+                    <input
+                      required
+                      class="modal__form__phone form__input"
+                      type="text"
+                      name="phone"
+                      placeholder="Введите ваш телефон..."
+                    />
+                    <textarea
+                      class="modal__form__comment"
+                      placeholder="Комментарий..."
+                      name="comment"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="modal__button common-button">
+                    Оставить заявку
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__answer modal">
+          <div class="modal__answer-dialog dialog">
+            <div class="modal__content">
+              <div class="modal-wrapper wrapper-answer">
+                <div class="modal__answer__icon">
+                  <img src="images/modal/apply.svg" alt="Заявка принята" />
+                </div>
+                <div class="modal__answer__title modal__answer__text">
+                  <span>Спасибо</span> за заявку
+                </div>
+                <div class="modal__answer__subtitle modal__answer__text">
+                  В ближайшее время мы <span>свяжемся</span> с Вами
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__answer-negative modal">
+          <div class="modal__answer-dialog dialog">
+            <div class="modal__content">
+              <div class="modal-wrapper wrapper-answer">
+                <div class="modal__answer__icon">
+                  <img
+                    class="negative-icon"
+                    src="images/modal/icon-error.png"
+                    alt="Заявка принята"
+                  />
+                </div>
+                <div class="modal__answer__title modal__answer__text">
+                  <span>Извините,</span> что-то пошло не так...
+                </div>
+                <div class="modal__answer__subtitle modal__answer__text">
+                  Попробуйте <span>повторить</span> запрос позже
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
