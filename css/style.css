@@ -291,6 +291,77 @@ span {
   width: 100%;
   max-width: 459px;
 }
+/*....................................*/
+
+/*features-section*/
+.features {
+  padding: 0 0 59px 0;
+}
+.features__container {
+  padding-bottom: 59px;
+}
+
+.features__middle-block {
+  text-align: center;
+  position: relative;
+  padding-bottom: 186px;
+}
+.features__image {
+  display: inline-block;
+  margin: 77px 0 16px 0;
+}
+.features__title {
+  font-size: var(--main-fz);
+  line-height: var(--main-lh);
+  color: var(--text-color);
+  max-width: 379px;
+  margin: 0 auto;
+}
+.features__item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+.features__item-img {
+  width: 120px;
+  height: 120px;
+}
+.features__item-desc {
+  font-size: var(--main-fz);
+  line-height: var(--main-lh);
+  color: var(--text-color);
+  max-width: 140px;
+}
+.item-first {
+  left: 17%;
+  top: 0;
+}
+.item-second {
+  left: 102px;
+  top: 208px;
+}
+.item-third {
+  left: 204px;
+  top: 416px;
+}
+.item-fourth {
+  left: 526px;
+  top: 508px;
+}
+.item-fifth {
+  right: 219px;
+  top: 416px;
+}
+.item-sixth {
+  right: 109px;
+  top: 193px;
+}
+.item-seventh {
+  right: 203px;
+  top: 14px;
+}
 
 /*JS-classes*/
 
