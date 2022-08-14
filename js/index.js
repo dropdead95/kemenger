@@ -31,6 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function closeModal() {
     requestModal.classList.add("hide");
     requestModal.classList.remove("show");
+    form.reset();
     document.body.style.overflow = "";
   }
   //  ..........................................
@@ -47,28 +48,28 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  postData(form);
+  bindPostData(form);
 
-  function postData(form) {
+  const postData = async (url, data) => {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: data,
+    });
+    return await res.json();
+  };
+
+  function bindPostData(form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const formData = new FormData(form);
 
-      const object = {};
+      const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
-
-      fetch("server.php", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(object),
-      })
-        .then((data) => data.text())
+      postData("http://localhost:3000/request", json)
         .then((data) => {
           console.log(data);
           modalAnswer.classList.add("show");
@@ -90,7 +91,6 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  //  slider
 
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
