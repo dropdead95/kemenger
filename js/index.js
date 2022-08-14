@@ -58,6 +58,9 @@ window.addEventListener("DOMContentLoaded", () => {
       },
       body: data,
     });
+    if (!res.ok) {
+      throw new Error(`Could not fetch ${url}, stats: ${res.status}`);
+    }
     return await res.json();
   };
 
